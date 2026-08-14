@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
-import { Star } from "lucide-react";
 import TopBar from "../components/TopBar";
 import SearchBar from "../components/SearchBar";
 import PlaceCard from "../components/PlaceCard";
 import BottomNav from "../components/BottomNav";
-import { destinations, travelPackages } from "../data";
+import { destinations } from "../data";
 
 export default function Home() {
 	const placeCards = destinations.slice(0, 2);
-	const mesir = travelPackages[0];
+	// const mesir = travelPackages[0];
 
 	return (
 		<div className="relative flex h-full flex-col">
