@@ -6,13 +6,7 @@ import Detail from "./screens/Detail";
 import Philosophy from "./screens/Philosophy";
 import ExperiaVilla from "./screens/ExperiaVilla";
 
-function Placeholder({ label }: { label: string }) {
-	return (
-		<div className="flex h-full items-center justify-center px-8 text-center">
-			<p className="text-sm font-medium text-[#111a2e]/40">{label} screen — not part of this build.</p>
-		</div>
-	);
-}
+
 
 export default function App() {
 	return (

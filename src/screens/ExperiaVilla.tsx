@@ -1,4 +1,3 @@
-import { ChevronDown } from "lucide-react";
 import BottomNav from "../components/BottomNav";
 import image from "./../assets/Villa.png"
 
