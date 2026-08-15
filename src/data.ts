@@ -1,11 +1,12 @@
 import type { Destination } from "./types";
 import balakumaran from "./assets/balakumaran.png"
+import indiraSoundarrajan from "./assets/IndiraSoundarrajan.png"
 
 export const destinations: Destination[] = [
 	{
 		id: "balakumaran",
-		name: "Balakumaran",
-		location: "Meaning of Life",
+		name: "Bala Kumaran",
+		location: "வாழ்க்கைத் தத்துவம்",
 		image: balakumaran,
 		price: 250,
 		rating: 4.8,
@@ -18,11 +19,10 @@ export const destinations: Destination[] = [
 			"Flamingos or flamingoes are a type of wading bird in the family Phoenicopteridae, the only bird family in the order Phoenicopteriformes.",
 	},
 	{
-		id: "forest",
-		name: "Forest",
-		location: "South Africa",
-		image:
-			"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop",
+		id: "indirasoundarajan",
+		name: "Indira Soundarajan",
+		location: "கடவுள் தத்துவம்",
+		image: indiraSoundarrajan,
 		price: 180,
 		rating: 4.6,
 		days: 5,

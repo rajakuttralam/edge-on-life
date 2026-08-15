@@ -3,6 +3,7 @@ import PhoneFrame from "./components/PhoneFrame";
 import Home from "./screens/Home";
 import PackageList from "./screens/PackageList";
 import Detail from "./screens/Detail";
+import Philosophy from "./screens/Philosophy";
 
 function Placeholder({ label }: { label: string }) {
 	return (
@@ -21,7 +22,7 @@ export default function App() {
 						<Route path="/" element={<Home />} />
 						<Route path="/packages" element={<PackageList />} />
 						<Route path="/place/:id" element={<Detail />} />
-						<Route path="/explore" element={<Placeholder label="Explore" />} />
+						<Route path="/philosophy" element={<Philosophy />} />
 						<Route path="/profile" element={<Placeholder label="Profile" />} />
 					</Routes>
 				</PhoneFrame>

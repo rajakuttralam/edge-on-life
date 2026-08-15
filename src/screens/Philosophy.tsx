@@ -8,7 +8,7 @@ import {
 	Check,
 	Flame,
 } from "lucide-react";
-import BottomNav from "./BottomNav";
+import BottomNav from "../components/BottomNav";
 
 // ---------- design tokens ----------
 const COLORS = {
@@ -28,8 +28,6 @@ const COLORS = {
 	rustDim: "#463228",
 };
 
-const DISPLAY_FONT =
-	"'Iowan Old Style', 'Palatino Linotype', Georgia, serif";
 
 type Factor = { id: string; label: string; done: boolean };
 type Span = {
@@ -43,16 +41,23 @@ type Span = {
 
 const INITIAL_SPANS: Span[] = [
 	{
-		id: "healthy",
-		name: "Healthy span",
-		blurb: "The years your body carries you well",
+		id: "தத்துவம்",
+		name: "தத்துவம்",
+		blurb: "...",
 		color: COLORS.sage,
 		dim: COLORS.sageDim,
 		factors: [
-			{ id: "taste", label: "Taste food", done: true },
-			{ id: "exercise", label: "Physical exercise", done: true },
-			{ id: "mental", label: "Mental health", done: false },
-			{ id: "environment", label: "Environment", done: true },
+			{
+				id: "taste", label: "Love is like a tree that yields fruit without expectations", done: true
+			},
+			{
+				id: "exercise", label: "Be Happy(மகிழ்ச்சியாக இருங்கள்)Be Elite (மேன்மையாக இருங்கள்)", done: true
+			},
+			{ id: "mental", label: "களவும்() கற்று மற(consciousness)", done: true },
+			{ id: "environment", label: "வெற்றி சுயக்கட்டுப்பாட்டில்(Self-control)  துவங்குகிறது.", done: true },
+			{ id: "environment", label: "பிறரை நம்பி(Depending) வாழாதே.", done: true },
+			{ id: "environment", label: "பிறரைத் தொந்தரவு செய்வதைத் தவிர்த்தால், அமைதி(Peace) நிலைக்கும்", done: true },
+
 		],
 	},
 	{
@@ -62,9 +67,10 @@ const INITIAL_SPANS: Span[] = [
 		color: COLORS.amber,
 		dim: COLORS.amberDim,
 		factors: [
-			{ id: "fun", label: "Fun and entertainment", done: true },
-			{ id: "happiness", label: "Happiness and fulfillment", done: false },
-			{ id: "achievement", label: "Achievement and success", done: false },
+			{ id: "fun", label: "Fun & Entertainment", done: true },
+			{ id: "happiness", label: "Fame & Happiness", done: true },
+			{ id: "happiness", label: "Desire & Fulfillment", done: true },
+			{ id: "achievement", label: "Achievement & Success", done: true },
 		],
 	},
 	{
@@ -75,9 +81,9 @@ const INITIAL_SPANS: Span[] = [
 		dim: COLORS.tealDim,
 		factors: [
 			{ id: "acceptance", label: "Acceptance", done: true },
-			{ id: "exposure", label: "Exposure", done: false },
+			{ id: "exposure", label: "Exposure", done: true },
 			{ id: "wisdom", label: "Wisdom", done: true },
-			{ id: "sleep", label: "Sleep and stress-free", done: false },
+			{ id: "sleep", label: "Sleep and stress-free", done: true },
 		],
 	},
 	{
@@ -87,10 +93,10 @@ const INITIAL_SPANS: Span[] = [
 		color: COLORS.rust,
 		dim: COLORS.rustDim,
 		factors: [
-			{ id: "ageing", label: "Accepted ageing today", done: false },
-			{ id: "safety", label: "Practiced a safety habit", done: true },
-			{ id: "sorrow", label: "Processed a setback", done: false },
-			{ id: "finance", label: "Checked in on finances", done: false },
+			{ id: "ageing", label: "Ageing", done: true },
+			{ id: "safety", label: "Accident", done: true },
+			{ id: "sorrow", label: "Sorrow Incidents Happen", done: true },
+			{ id: "finance", label: "Financial Problem", done: true },
 		],
 	},
 ];
@@ -127,12 +133,9 @@ const NAV_ITEMS = [
 	{ id: "profile", label: "Profile", icon: User },
 ] as const;
 
-export default function LifeSpanWellnessPage() {
+export default function Philosophy() {
 	const [spans, setSpans] = useState<Span[]>(INITIAL_SPANS);
 	const [expanded, setExpanded] = useState<string | null>("healthy");
-	const [activeTab, setActiveTab] =
-		useState<(typeof NAV_ITEMS)[number]["id"]>("today");
-
 	const toggleFactor = (spanId: string, factorId: string) => {
 		setSpans((prev) =>
 			prev.map((s) =>
@@ -153,134 +156,29 @@ export default function LifeSpanWellnessPage() {
 		return pct(all);
 	}, [spans]);
 
-	const streak = 6;
-	const gap = 10;
-	const arcLen = 90 - gap;
-	const cx = 120;
-	const cy = 120;
-	const rTrack = 96;
-
 	return (
-		<div
-			className="flex min-h-screen items-center justify-center p-6"
+		<div className="flex min-h-screen items-center justify-center p-6"
 			style={{ background: "#0B0D11" }}
 		>
-			<div
-				className="relative w-full max-w-sm overflow-hidden rounded-3xl border"
-				style={{ background: COLORS.ink, borderColor: COLORS.hairline }}
-			>
-				{/* status notch */}
-				<div className="flex items-center justify-between px-6 pb-1 pt-4 text-xs" style={{ color: COLORS.muted }}>
-					<span>9:41</span>
-					<span>Life span</span>
-				</div>
-
+			<div className="relative w-full max-w-sm overflow-hidden rounded-3xl border"
+				style={{ background: COLORS.ink, borderColor: COLORS.hairline }} >
 				<div className="max-h-[780px] overflow-y-auto px-5 pb-24 pt-2">
-					{/* header */}
-					<div className="flex items-start justify-between pt-3">
-						<div>
-							<p className="text-xs uppercase tracking-widest" style={{ color: COLORS.muted }}>
-								Good evening
-							</p>
-							<h1
-								className="mt-1 text-2xl"
-								style={{ fontFamily: DISPLAY_FONT, color: COLORS.bone }}
-							>
-								Your day, mapped
-							</h1>
-						</div>
-						<div
-							className="flex items-center gap-1 rounded-full border px-3 py-1.5 text-xs"
-							style={{ borderColor: COLORS.hairline, color: COLORS.amber }}
-						>
-							<Flame size={14} aria-hidden="true" />
-							<span>{streak} day streak</span>
-						</div>
-					</div>
-
-					{/* compass hero */}
-					<div className="mt-6 flex flex-col items-center">
-						<svg width="220" height="220" viewBox="0 0 240 240" role="img" aria-label={`Overall life balance ${overallPct} percent`}>
-							{spans.map((s, i) => {
-								const start = i * 90;
-								const end = start + arcLen;
-								const p = pct(s.factors);
-								const progressEnd = start + (arcLen * p) / 100;
-								return (
-									<g key={s.id}>
-										<path
-											d={describeArc(cx, cy, rTrack, start, end)}
-											stroke={s.dim}
-											strokeWidth={14}
-											strokeLinecap="round"
-											fill="none"
-										/>
-										{p > 0 && (
-											<path
-												d={describeArc(cx, cy, rTrack, start, progressEnd)}
-												stroke={s.color}
-												strokeWidth={14}
-												strokeLinecap="round"
-												fill="none"
-											/>
-										)}
-									</g>
-								);
-							})}
-							<text
-								x={cx}
-								y={cy - 6}
-								textAnchor="middle"
-								style={{ fontFamily: DISPLAY_FONT, fontSize: 44, fill: COLORS.bone }}
-							>
-								{overallPct}
-							</text>
-							<text
-								x={cx}
-								y={cy + 20}
-								textAnchor="middle"
-								style={{ fontSize: 12, fill: COLORS.muted, letterSpacing: "0.08em" }}
-							>
-								LIFE BALANCE
-							</text>
-						</svg>
-
-						<div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2">
-							{spans.map((s) => (
-								<div key={s.id} className="flex items-center gap-2 text-xs" style={{ color: COLORS.muted }}>
-									<span
-										className="h-2 w-2 rounded-full"
-										style={{ background: s.color }}
-										aria-hidden="true"
-									/>
-									<span>{s.name.replace(" span", "")}</span>
-									<span style={{ color: COLORS.bone }}>{pct(s.factors)}%</span>
-								</div>
-							))}
-						</div>
-					</div>
-
-					{/* span cards */}
 					<div className="mt-7 flex flex-col gap-3">
 						{spans.map((s) => {
 							const isOpen = expanded === s.id;
 							const p = pct(s.factors);
 							return (
-								<div
-									key={s.id}
+								<div key={s.id}
 									className="overflow-hidden rounded-2xl border"
-									style={{ borderColor: COLORS.hairline, background: COLORS.surface }}
-								>
+									style={{ borderColor: COLORS.hairline, background: COLORS.surface }} >
 									<button
 										onClick={() => setExpanded(isOpen ? null : s.id)}
 										className="flex w-full items-center justify-between px-4 py-3.5 text-left"
-										aria-expanded={isOpen}
-									>
+										aria-expanded={isOpen} >
 										<div className="flex items-center gap-3">
 											<span
 												className="flex h-9 w-9 items-center justify-center rounded-full text-xs"
-												style={{ background: s.dim, color: s.color }}
-											>
+												style={{ background: s.dim, color: s.color }} >
 												{p}%
 											</span>
 											<div>
@@ -333,7 +231,6 @@ export default function LifeSpanWellnessPage() {
 														className="text-sm"
 														style={{
 															color: f.done ? COLORS.bone : COLORS.muted,
-															textDecoration: f.done ? "line-through" : "none",
 														}}
 													>
 														{f.label}
