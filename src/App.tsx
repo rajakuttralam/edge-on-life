@@ -4,6 +4,7 @@ import Home from "./screens/Home";
 import PackageList from "./screens/PackageList";
 import Detail from "./screens/Detail";
 import Philosophy from "./screens/Philosophy";
+import ExperiaVilla from "./screens/ExperiaVilla";
 
 function Placeholder({ label }: { label: string }) {
 	return (
@@ -23,7 +24,7 @@ export default function App() {
 						<Route path="/packages" element={<PackageList />} />
 						<Route path="/place/:id" element={<Detail />} />
 						<Route path="/philosophy" element={<Philosophy />} />
-						<Route path="/profile" element={<Placeholder label="Profile" />} />
+						<Route path="/experiavilla" element={<ExperiaVilla />} />
 					</Routes>
 				</PhoneFrame>
 			</HashRouter>

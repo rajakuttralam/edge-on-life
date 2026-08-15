@@ -5,7 +5,7 @@ const items = [
 	{ to: "/", icon: Home, label: "Home" },
 	{ to: "/packages", icon: Briefcase, label: "Packages" },
 	{ to: "/philosophy", icon: MapPin, label: "Philosophy" },
-	{ to: "/profile", icon: User, label: "Profile" },
+	{ to: "/experiavilla", icon: User, label: "EXPERIA VILLA" },
 ];
 
 export default function BottomNav() {
