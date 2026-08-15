@@ -1,16 +1,11 @@
 import { useMemo, useState } from "react";
 import {
-	Home,
-	Compass,
-	BarChart3,
-	User,
 	ChevronDown,
 	Check,
 	Flame,
 } from "lucide-react";
 import BottomNav from "../components/BottomNav";
 
-// ---------- design tokens ----------
 const COLORS = {
 	ink: "#14171D",
 	surface: "#1C212B",
@@ -121,19 +116,9 @@ function pct(factors: Factor[]) {
 	);
 }
 
-const NAV_ITEMS = [
-	{ id: "today", label: "Today", icon: Home },
-	{ id: "spans", label: "Spans", icon: Compass },
-	{ id: "insights", label: "Insights", icon: BarChart3 },
-	{ id: "profile", label: "Profile", icon: User },
-] as const;
-
 export default function LifeSpanWellnessPage() {
 	const [spans, setSpans] = useState<Span[]>(INITIAL_SPANS);
 	const [expanded, setExpanded] = useState<string | null>("healthy");
-	const [activeTab, setActiveTab] =
-		useState<(typeof NAV_ITEMS)[number]["id"]>("today");
-
 	const toggleFactor = (spanId: string, factorId: string) => {
 		setSpans((prev) =>
 			prev.map((s) =>

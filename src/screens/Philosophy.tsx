@@ -1,16 +1,10 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import {
-	Home,
-	Compass,
-	BarChart3,
-	User,
 	ChevronDown,
-	Check,
-	Flame,
+	Check
 } from "lucide-react";
 import BottomNav from "../components/BottomNav";
 
-// ---------- design tokens ----------
 const COLORS = {
 	ink: "#14171D",
 	surface: "#1C212B",
@@ -27,7 +21,6 @@ const COLORS = {
 	rust: "#C1613F",
 	rustDim: "#463228",
 };
-
 
 type Factor = { id: string; label: string; done: boolean };
 type Span = {
@@ -101,37 +94,12 @@ const INITIAL_SPANS: Span[] = [
 	},
 ];
 
-function polarToCartesian(cx: number, cy: number, r: number, angleDeg: number) {
-	const rad = ((angleDeg - 90) * Math.PI) / 180;
-	return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
-}
-
-function describeArc(
-	cx: number,
-	cy: number,
-	r: number,
-	startAngle: number,
-	endAngle: number
-) {
-	const start = polarToCartesian(cx, cy, r, endAngle);
-	const end = polarToCartesian(cx, cy, r, startAngle);
-	const largeArc = endAngle - startAngle <= 180 ? 0 : 1;
-	return `M ${start.x} ${start.y} A ${r} ${r} 0 ${largeArc} 0 ${end.x} ${end.y}`;
-}
-
 function pct(factors: Factor[]) {
 	if (factors.length === 0) return 0;
 	return Math.round(
 		(factors.filter((f) => f.done).length / factors.length) * 100
 	);
 }
-
-const NAV_ITEMS = [
-	{ id: "today", label: "Today", icon: Home },
-	{ id: "spans", label: "Spans", icon: Compass },
-	{ id: "insights", label: "Insights", icon: BarChart3 },
-	{ id: "profile", label: "Profile", icon: User },
-] as const;
 
 export default function Philosophy() {
 	const [spans, setSpans] = useState<Span[]>(INITIAL_SPANS);
@@ -150,11 +118,6 @@ export default function Philosophy() {
 			)
 		);
 	};
-
-	const overallPct = useMemo(() => {
-		const all = spans.flatMap((s) => s.factors);
-		return pct(all);
-	}, [spans]);
 
 	return (
 		<div className="flex min-h-screen items-center justify-center p-6"
