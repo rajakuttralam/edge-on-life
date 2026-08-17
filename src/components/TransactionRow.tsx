@@ -24,10 +24,8 @@ export default function TransactionRow({
 
 	return (
 		<div className="flex items-center gap-3 py-2.5">
-			<span
-				className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl"
-				style={{ backgroundColor: `र {category.color}1a` }}
-			>
+			<span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl"
+				style={{ backgroundColor: `र {category.color}1a` }} >
 				<Icon size={17} style={{ color: category.color }} strokeWidth={2.2} />
 			</span>
 			<div className="min-w-0 flex-1">
