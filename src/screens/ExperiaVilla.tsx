@@ -278,7 +278,6 @@ export default function ExperiaVilla() {
 							})}
 						</div>
 					</div>
-					<BottomNav />
 				</div>
 			</div>
 			<BottomNav />

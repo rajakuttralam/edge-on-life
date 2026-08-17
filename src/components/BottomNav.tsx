@@ -1,11 +1,12 @@
-import { Home, Briefcase, MapPin, User } from "lucide-react";
+import { Home, Briefcase, MapPin, User, Currency } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const items = [
 	{ to: "/", icon: Home, label: "Home" },
 	{ to: "/packages", icon: Briefcase, label: "Packages" },
 	{ to: "/philosophy", icon: MapPin, label: "Philosophy" },
-	{ to: "/experiavilla", icon: User, label: "EXPERIA VILLA" },
+	{ to: "/experiavilla", icon: User, label: "Experia Villa" },
+	{ to: "/budget", icon: Currency, label: "Monthly Budget" },
 ];
 
 export default function BottomNav() {
@@ -20,7 +21,8 @@ export default function BottomNav() {
 						aria-label={label}
 						className="group relative flex items-center justify-center" >
 						{({ isActive }) => (
-							<span className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors ${isActive ? "bg-[#f5a623] text-[#111a2e]" : "text-white/60"}`} >
+							<span className={`flex h-9 w-9 items-center justify-center rounded-full transition-colors ${isActive ? "bg-[#f5a623] text-[#111a2e]" : "text-white/60"
+								}`} >
 								<Icon size={18} strokeWidth={2.2} />
 							</span>
 						)}

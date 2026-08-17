@@ -5,6 +5,7 @@ import PackageList from "./screens/PackageList";
 import Detail from "./screens/Detail";
 import Philosophy from "./screens/Philosophy";
 import ExperiaVilla from "./screens/ExperiaVilla";
+import Budget from "./screens/Budget";
 
 export default function App() {
 	return (
@@ -17,6 +18,7 @@ export default function App() {
 						<Route path="/place/:id" element={<Detail />} />
 						<Route path="/philosophy" element={<Philosophy />} />
 						<Route path="/experiavilla" element={<ExperiaVilla />} />
+						<Route path="/budget" element={<Budget />} />
 					</Routes>
 				</PhoneFrame>
 			</HashRouter>
