@@ -1,10 +1,9 @@
 import BottomNav from "../components/BottomNav";
 import image from "./../assets/Villa.png"
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import {
 	ChevronDown,
-	Check,
-	Flame,
+	Check
 } from "lucide-react";
 
 const COLORS = {
@@ -23,9 +22,6 @@ const COLORS = {
 	rust: "#C1613F",
 	rustDim: "#463228",
 };
-
-const DISPLAY_FONT =
-	"'Iowan Old Style', 'Palatino Linotype', Georgia, serif";
 
 type Factor = { id: string; label: string; done: boolean };
 type Span = {
@@ -151,24 +147,6 @@ const INITIAL_SPANS: Span[] = [
 	},
 ];
 
-function polarToCartesian(cx: number, cy: number, r: number, angleDeg: number) {
-	const rad = ((angleDeg - 90) * Math.PI) / 180;
-	return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) };
-}
-
-function describeArc(
-	cx: number,
-	cy: number,
-	r: number,
-	startAngle: number,
-	endAngle: number
-) {
-	const start = polarToCartesian(cx, cy, r, endAngle);
-	const end = polarToCartesian(cx, cy, r, startAngle);
-	const largeArc = endAngle - startAngle <= 180 ? 0 : 1;
-	return `M ${start.x} ${start.y} A ${r} ${r} 0 ${largeArc} 0 ${end.x} ${end.y}`;
-}
-
 function pct(factors: Factor[]) {
 	if (factors.length === 0) return 0;
 	return Math.round(
@@ -196,17 +174,8 @@ export default function ExperiaVilla() {
 		);
 	};
 
-	const overallPct = useMemo(() => {
-		const all = spans.flatMap((s) => s.factors);
-		return pct(all);
-	}, [spans]);
 
-	const streak = 6;
-	const gap = 10;
-	const arcLen = 90 - gap;
-	const cx = 120;
-	const cy = 120;
-	const rTrack = 96;
+
 
 	return (
 		<div className="flex flex-col min-h-screen items-center justify-center p-6"
