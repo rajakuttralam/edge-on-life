@@ -6,8 +6,6 @@ import Detail from "./screens/Detail";
 import Philosophy from "./screens/Philosophy";
 import ExperiaVilla from "./screens/ExperiaVilla";
 
-
-
 export default function App() {
 	return (
 		<div className="flex min-h-screen items-center justify-center ">
