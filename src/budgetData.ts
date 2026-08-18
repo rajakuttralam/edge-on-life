@@ -16,11 +16,20 @@ export const budgetCategories: any[] = [
 ];
 
 export const transactions: any[] = [
-	{ id: "t1", merchant: "Akila", categoryId: "utilities", date: "Aug 7", amount: 23000, type: "expense" },
-	{ id: "t2", merchant: "Rent", categoryId: "utilities", date: "Aug 7", amount: 12000, type: "expense" },
-	{ id: "t3", merchant: "Milk.", categoryId: "utilities", date: "Aug 7", amount: 1500, type: "expense" },
-	{ id: "t4", merchant: "EB", categoryId: "utilities", date: "Aug 2", amount: 2500, type: "expense" },
+	{ id: "t1", merchant: "Akila", categoryId: "housing", date: "Aug 7", amount: 23000, type: "expense" },
+	{ id: "t2", merchant: "Rent", categoryId: "housing", date: "Aug 7", amount: 12000, type: "expense" },
+	{ id: "t3", merchant: "Milk.", categoryId: "housing", date: "Aug 7", amount: 1500, type: "expense" },
+	{ id: "t4", merchant: "EB", categoryId: "housing", date: "Aug 2", amount: 2500, type: "expense" },
 	{ id: "t5", merchant: "Internet + Mobile", categoryId: "entertainment", date: "Aug 10", amount: 1000, type: "expense" },
-	{ id: "t6", merchant: "Hair Cut & Coloring", categoryId: "utilities", date: "Aug 5", amount: 700, type: "expense" },
+	{ id: "t6", merchant: "Hair Cut & Coloring", categoryId: "housing", date: "Aug 5", amount: 700, type: "expense" },
 	{ id: "t7", merchant: "Petrol & Service", categoryId: "transport", date: "Aug 10", amount: 4000, type: "expense" },
+	{ id: "t8", merchant: "Tution Fees", categoryId: "housing", date: "Aug 2", amount: 500, type: "expense" },
+	{ id: "t9", merchant: "Tea", categoryId: "entertainment", date: "Aug 10", amount: 1500, type: "expense" },
+	{ id: "t10", merchant: "Sastha Koil", categoryId: "housing", date: "Aug 5", amount: 200, type: "expense" },
+	{ id: "t11", merchant: "Food", categoryId: "transport", date: "Aug 10", amount: 2300, type: "expense" },
+	{ id: "t12", merchant: "Medicine", categoryId: "housing", date: "Aug 2", amount: 500, type: "expense" },
+	{ id: "t13", merchant: "Ration", categoryId: "entertainment", date: "Aug 10", amount: 200, type: "expense" },
+	{ id: "t14", merchant: "Sastha Koil", categoryId: "housing", date: "Aug 5", amount: 200, type: "expense" },
+	{ id: "t15", merchant: "Flour", categoryId: "transport", date: "Aug 10", amount: 800, type: "expense" },
+	{ id: "t15", merchant: "Snacks", categoryId: "transport", date: "Aug 10", amount: 500, type: "expense" },
 ];

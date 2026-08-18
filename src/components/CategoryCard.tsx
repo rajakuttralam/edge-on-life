@@ -15,7 +15,6 @@ const icons = {
 
 export default function CategoryCard({ category }: { category: BudgetCategory }) {
 	const Icon = icons[category.icon];
-	// const pct = Math.min(category.spent / category.budget, 1) * 100;
 	const over = category.spent > category.budget;
 
 	return (
@@ -27,17 +26,16 @@ export default function CategoryCard({ category }: { category: BudgetCategory })
 				>
 					<Icon size={16} style={{ color: category.color }} strokeWidth={2.2} />
 				</span>
-				{over && (
-					<span className="rounded-full bg-[#ff6b6b]/10 px-2 py-0.5 text-[10px] font-bold text-[#ff6b6b]">
-						OVER
-					</span>
+				{over && (<span className="rounded-full bg-[#ff6b6b]/10 px-2 py-0.5 text-[10px] font-bold text-[#ff6b6b]">
+					OVER
+				</span>
 				)}
 			</div>
 			<div>
 				<p className="text-[13px] font-bold text-[#111a2e]">{category.name}</p>
-				<p className="mt-0.5 text-[11px] text-[#111a2e]/45">
+				<p className="mt-0.5 text-[11px] font-bold text-gray-900/70 ">
 					र {category.spent.toLocaleString()}{" "}
-					<span className="text-[#111a2e]/30">/ र {category.budget.toLocaleString()}</span>
+					<span className="text-gray-900">/ र {category.budget.toLocaleString()}</span>
 				</p>
 			</div>
 			<div className="h-1.5 w-full overflow-hidden rounded-full bg-[#eef0f4]">
