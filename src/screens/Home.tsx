@@ -33,46 +33,6 @@ export default function Home() {
 						<PlaceCard key={p.id} place={p} />
 					))}
 				</div>
-
-				{/* <div className="mt-8 flex items-center justify-between">
-					<h2 className="text-[15px] font-bold text-[#111a2e]">Travel Package</h2>
-					<Link to="/packages" className="text-xs font-medium text-[#111a2e]/40">
-						See more
-					</Link>
-				</div> */}
-				{/* <div className="mt-3 flex gap-3 overflow-x-auto pb-1">
-					<Link
-						to={`/place/${destinations[3].id}`}
-						className="flex w-[220px] shrink-0 items-center gap-3 rounded-2xl bg-white p-2.5 shadow-[0_8px_20px_-10px_rgba(15,23,41,0.2)]"
-					>
-						<img
-							src={mesir.image}
-							alt={mesir.name}
-							className="h-16 w-16 shrink-0 rounded-xl object-cover"
-						/>
-						<div className="min-w-0">
-							<p className="truncate text-sm font-bold text-[#111a2e]">{mesir.name}</p>
-							<p className="truncate text-xs text-[#111a2e]/45">{mesir.location}</p>
-							<div className="mt-1 flex items-center gap-1">
-								<Star size={11} className="fill-[#f5a623] text-[#f5a623]" />
-								<span className="text-[11px] font-semibold text-[#111a2e]/70">
-									{mesir.rating}
-								</span>
-								<span className="text-[11px] text-[#3b6ef5]">See details</span>
-							</div>
-						</div>
-					</Link>
-					<Link
-						to="/packages"
-						className="w-16 shrink-0 overflow-hidden rounded-2xl"
-					>
-						<img
-							src={destinations[1].image}
-							alt="More packages"
-							className="h-full w-full object-cover"
-						/>
-					</Link>
-				</div> */}
 			</div>
 
 			<BottomNav />
