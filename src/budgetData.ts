@@ -12,7 +12,22 @@ export const budgetCategories: any[] = [
 	{ id: "utilities", name: "Lakshmi", icon: "zap", color: "#a0a4ab", budget: 50000, spent: 1500 },
 	{ id: "savings", name: "Jewel Loan", icon: "piggy", color: "#111a2e", budget: 150000, spent: 3000 },
 	{ id: "savings", name: "Ashok", icon: "piggy", color: "#111a2e", budget: 125000, spent: 3000 },
+];
 
+export const idCard: any[] = [
+	{ id: "housing", name: "Raja K", icon: "home", color: "#6c63ff", budget: 'RMM0335869', spent: 10322 },
+	{ id: "food", name: "Akila", icon: "utensils", color: "#f5a623", budget: 'DVS7294531', spent: 3350 },
+	{ id: "transport", name: "Chakku", icon: "car", color: "#2fd4a6", budget: 'JQH1378785', spent: 7100 },
+	{ id: "shopping", name: "Appa", icon: "bag", color: "#ff6b6b", budget: 'RMM2076974', spent: 9050 },
+	{ id: "entertainment", name: "Amma", icon: "film", color: "#4ec5f1", budget: 'RMM2076982', spent: 7400 },
+];
+
+export const interestFreeLoan: any[] = [
+	{ id: "housing", name: "Shop 1 Advance", icon: "home", color: "#6c63ff", budget: 400000, spent: 10322 },
+	{ id: "food", name: "Shop 2 Advance", icon: "utensils", color: "#f5a623", budget: 60000, spent: 3350 },
+	{ id: "transport", name: "Kulali", icon: "car", color: "#2fd4a6", budget: 35000, spent: 7100 },
+	{ id: "shopping", name: "Unnamalai", icon: "bag", color: "#ff6b6b", budget: 50000, spent: 9050 },
+	{ id: "entertainment", name: "Uma", icon: "film", color: "#4ec5f1", budget: 50000, spent: 7400 },
 ];
 
 export const transactions: any[] = [

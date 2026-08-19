@@ -4,7 +4,9 @@ import CategoryCard from "../components/CategoryCard";
 import TransactionRow from "../components/TransactionRow";
 import MonthSwitcher from "../components/MonthSwitcher";
 import BudgetNav from "../components/BudgetNav";
-import { budgetCategories, transactions, monthlyIncome } from "../budgetData";
+import { budgetCategories, transactions, monthlyIncome, idCard, interestFreeLoan } from "../budgetData";
+import IdentityCard from "../components/IdentityCard";
+import IFL from "../components/IFL";
 
 const months = ["June 2026", "July 2026", "August 2026"];
 
@@ -107,6 +109,16 @@ export default function Budget() {
 						const category = budgetCategories.find((c) => c.id === t.categoryId)!;
 						return <TransactionRow key={t.id} transaction={t} category={category} />;
 					})}
+				</div>
+				<div className="mt-3 -mx-6 flex gap-3 overflow-x-auto px-6 pb-1">
+					{idCard.map((c) => (
+						<IdentityCard key={c.id} category={c} />
+					))}
+				</div>
+				<div className="mt-3 -mx-6 flex gap-3 overflow-x-auto px-6 pb-1">
+					{interestFreeLoan.map((c) => (
+						<IFL key={c.id} category={c} />
+					))}
 				</div>
 			</div>
 
