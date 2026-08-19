@@ -120,12 +120,12 @@ export default function Philosophy() {
 	};
 
 	return (
-		<div className="flex min-h-screen items-center justify-center p-6"
+		<div className="flex min-h-screen items-start justify-start p-6"
 			style={{ background: "#0B0D11" }}
 		>
 			<div className="relative w-full max-w-sm overflow-hidden rounded-3xl border"
 				style={{ background: COLORS.ink, borderColor: COLORS.hairline }} >
-				<div className="max-h-[780px] overflow-y-auto px-5 pb-24 pt-2">
+				<div className="max-h-[680px] overflow-y-auto px-5 pb-24 pt-2">
 					<div className="mt-7 flex flex-col gap-3">
 						{spans.map((s) => {
 							const isOpen = expanded === s.id;

@@ -147,13 +147,9 @@ export default function LifeSpanWellnessPage() {
 	const rTrack = 96;
 
 	return (
-		<div
-			className="flex min-h-screen items-center justify-center p-6"
-			style={{ background: "#0B0D11" }}
-		>
-			<div
-				className="relative w-full max-w-sm overflow-hidden rounded-3xl border"
-				style={{ background: COLORS.ink, borderColor: COLORS.hairline }}
+		<div className="flex min-h-screen items-center justify-center p-6">
+			<div className="relative w-full max-h-[680px] overflow-y-auto max-w-sm overflow-hidden rounded-3xl border"
+				style={{ background: COLORS.amberDim, borderColor: COLORS.hairline }}
 			>
 				{/* status notch */}
 				<div className="flex items-center justify-between px-6 pb-1 pt-4 text-xs" style={{ color: COLORS.muted }}>
@@ -236,7 +232,7 @@ export default function LifeSpanWellnessPage() {
 								<div key={s.id} className="flex items-center gap-2 text-xs" style={{ color: COLORS.muted }}>
 									<span
 										className="h-2 w-2 rounded-full"
-										style={{ background: s.color }}
+
 										aria-hidden="true"
 									/>
 									<span>{s.name.replace(" span", "")}</span>
@@ -254,7 +250,7 @@ export default function LifeSpanWellnessPage() {
 							return (
 								<div key={s.id}
 									className="overflow-hidden rounded-2xl border"
-									style={{ borderColor: COLORS.hairline, background: COLORS.surface }} >
+									style={{ borderColor: COLORS.bone, background: COLORS.rustDim }} >
 									<button
 										onClick={() => setExpanded(isOpen ? null : s.id)}
 										className="flex w-full items-center justify-between px-4 py-3.5 text-left"

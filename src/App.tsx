@@ -10,7 +10,7 @@ import Pilgrimages from "./screens/Pilgrimages";
 
 export default function App() {
 	return (
-		<div className="flex min-h-screen items-center justify-center ">
+		<div className="flex min-h-screen items-center justify-between max-w-sm">
 			<HashRouter>
 				<PhoneFrame>
 					<Routes>

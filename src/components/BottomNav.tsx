@@ -1,4 +1,4 @@
-import { Home, Briefcase, MapPin, User, Currency } from "lucide-react";
+import { Home, Briefcase, MapPin, User, Bus, IndianRupee } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const items = [
@@ -6,7 +6,8 @@ const items = [
 	{ to: "/packages", icon: Briefcase, label: "Packages" },
 	{ to: "/philosophy", icon: MapPin, label: "Philosophy" },
 	{ to: "/experiavilla", icon: User, label: "Experia Villa" },
-	{ to: "/budget", icon: Currency, label: "Monthly Budget" },
+	{ to: "/budget", icon: IndianRupee, label: "Monthly Budget" },
+	{ to: "/pilgrimages", icon: Bus, label: "Pilgrimages" },
 ];
 
 export default function BottomNav() {

@@ -1,4 +1,4 @@
-import { Check, ChevronDown } from "lucide-react";
+import { Check, ChevronDown, BusIcon } from "lucide-react";
 import { useState } from "react";
 import BottomNav from "../components/BottomNav";
 
@@ -79,12 +79,10 @@ export default function Pilgrimages() {
 
 	return (
 		<div className="flex h-full w-[100vw] flex-col">
-			<div className="flex min-h-screen items-start justify-start p-6"
-				style={{ background: "#0B0D11" }}	>
-				<div className="relative w-full max-w-sm overflow-hidden rounded-3xl border"
-					style={{ background: COLORS.ink, borderColor: COLORS.hairline }} >
-					<div className="max-h-[780px] overflow-y-auto px-5 pb-24 pt-2">
-						<div className="mt-7 flex flex-col gap-3">
+			<div className="flex min-h-screen items-start justify-start">
+				<div className="relative w-full max-w-sm overflow-hidden">
+					<div className="max-h-[680px] overflow-y-auto px-5 pb-12 pt-2">
+						<div className="my-7 max-h-[580px] overflow-y-auto flex flex-col gap-3">
 							{spans.map((s) => {
 								const isOpen = expanded === s.id;
 								const p = pct(s.factors);
@@ -100,7 +98,7 @@ export default function Pilgrimages() {
 												<span
 													className="flex h-9 w-9 items-center justify-center rounded-full text-xs"
 													style={{ background: s.dim, color: s.color }} >
-													{p}%
+													<BusIcon />
 												</span>
 												<div>
 													<p className="text-sm" style={{ color: COLORS.bone }}>
@@ -166,6 +164,7 @@ export default function Pilgrimages() {
 						</div>
 					</div>
 				</div>
+
 			</div>
 			<BottomNav />
 		</div>

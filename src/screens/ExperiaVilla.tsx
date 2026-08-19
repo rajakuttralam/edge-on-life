@@ -181,7 +181,7 @@ export default function ExperiaVilla() {
 		<div className="flex flex-col min-h-screen items-center justify-center p-6"
 			style={{ background: "#0B0D11" }} >
 			<span
-				className="flex w-full text-white items-start justify-start p-3 rounded-full text-3xl"
+				className="flex w-full max-h-[680px] overflow-y-auto text-white items-start justify-start p-3 rounded-full text-3xl"
 			>
 				EXPERIA VILLA
 			</span>
