@@ -10,20 +10,18 @@ import Pilgrimages from "./screens/Pilgrimages";
 
 export default function App() {
 	return (
-		<div className="flex min-h-screen items-center justify-between max-w-sm">
-			<HashRouter>
-				<PhoneFrame>
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/packages" element={<PackageList />} />
-						<Route path="/place/:id" element={<Detail />} />
-						<Route path="/philosophy" element={<Philosophy />} />
-						<Route path="/experiavilla" element={<ExperiaVilla />} />
-						<Route path="/budget" element={<Budget />} />
-						<Route path="/pilgrimages" element={<Pilgrimages />} />
-					</Routes>
-				</PhoneFrame>
-			</HashRouter>
-		</div>
+		<HashRouter>
+			<PhoneFrame>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/packages" element={<PackageList />} />
+					<Route path="/place/:id" element={<Detail />} />
+					<Route path="/philosophy" element={<Philosophy />} />
+					<Route path="/experiavilla" element={<ExperiaVilla />} />
+					<Route path="/budget" element={<Budget />} />
+					<Route path="/pilgrimages" element={<Pilgrimages />} />
+				</Routes>
+			</PhoneFrame>
+		</HashRouter>
 	);
 }

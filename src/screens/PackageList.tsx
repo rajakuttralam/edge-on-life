@@ -111,17 +111,17 @@ export default function LifeSpanWellnessPage() {
 		);
 	};
 	return (
-		<div className="mt-3 grid grid-cols-1 gap-3">
+		<div className="grid gap-3 px-3 w-[90%] mt-3">
 			{spans.map((s) => {
 				const isOpen = expanded === s.id;
 				const p = pct(s.factors);
 				return (
 					<div key={s.id}
-						className="overflow-hidden rounded-2xl border"
+						className="overflow-hidden rounded-2xl px-3 border"
 						style={{ borderColor: COLORS.bone, background: COLORS.rustDim }} >
 						<button
 							onClick={() => setExpanded(isOpen ? null : s.id)}
-							className="flex w-full items-center justify-between px-4 py-3.5 text-left"
+							className="flex w-full items-center justify-between py-3.5 text-left"
 							aria-expanded={isOpen} >
 							<div className="flex items-center gap-3">
 								<span
@@ -148,7 +148,6 @@ export default function LifeSpanWellnessPage() {
 								aria-hidden="true"
 							/>
 						</button>
-
 						{isOpen && (
 							<div
 								className="flex flex-col gap-1 px-4 pb-4"

@@ -1,4 +1,3 @@
-import BottomNav from "../components/BottomNav";
 import image from "./../assets/Villa.png"
 import { useState } from "react";
 import {
@@ -178,22 +177,19 @@ export default function ExperiaVilla() {
 
 
 	return (
-		<div className="flex flex-col min-h-screen items-center justify-center p-6"
-			style={{ background: "#0B0D11" }} >
-			<span
-				className="flex w-full max-h-[680px] overflow-y-auto text-white items-start justify-start p-3 rounded-full text-3xl"
-			>
+		<div className="flex flex-col  items-center justify-center" style={{ background: "#f8f8f8" }} >
+			{/* <span className="flex w-full overflow-y-auto text-white items-start justify-start p-3 rounded-full text-3xl" >
 				EXPERIA VILLA
-			</span>
-			<div className="">
+			</span> */}
+			<div className=" " >
 				<img
 					src={image}
 					alt={"name"}
-					className="p-3 object-cover transition-transform duration-300 group-hover:scale-105"
+					className="h-[50vh] w-full object-cover  transition-transform duration-300 group-hover:scale-105"
 				/>
 			</div>
-			<div className="flex min-h-screen items-center justify-center"
-				style={{ background: "#0B0D11" }} >
+			<div className="flex  items-center justify-center"
+				style={{ background: "#f8f8f8" }} >
 				<div className="relative w-full max-w-sm overflow-hidden rounded-3xl border"
 					style={{ background: COLORS.ink, borderColor: COLORS.hairline }}>
 					<div className="max-h-[780px] overflow-y-auto px-5 pb-24 pt-2">
@@ -280,7 +276,6 @@ export default function ExperiaVilla() {
 					</div>
 				</div>
 			</div>
-			<BottomNav />
 		</div>
 	);
 }
