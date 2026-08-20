@@ -12,8 +12,8 @@ const items = [
 
 export default function BottomNav() {
 	return (
-		<div className="absolute inset-x-6 bottom-6 z-20">
-			<nav className="flex items-center justify-between rounded-full bg-[#111a2e] px-7 py-4 shadow-[0_20px_40px_-10px_rgba(17,26,46,0.55)]">
+		<div className="absolute  bottom-12 z-20 max-w-sm">
+			<nav className="flex items-center justify-between gap-3 rounded-full bg-[#111a2e] px-7 py-4 shadow-[0_20px_40px_-10px_rgba(17,26,46,0.55)]">
 				{items.map(({ to, icon: Icon, label }) => (
 					<NavLink
 						key={to}
