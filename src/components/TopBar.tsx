@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 
 export default function TopBar() {
 	return (
-		<div className="w-[90vw] mt-5">
+		<div className="fixed top-0 w-[100vw] z-20 bg-slate-50 p-3">
 			<div className="flex flex-row items-center justify-between ">
 				<button aria-label="Menu" className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-[#111a2e] shadow-[0_6px_16px_-4px_rgba(15,23,41,0.15)]" >
 					<NavLink

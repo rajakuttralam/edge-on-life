@@ -112,11 +112,11 @@ export default function LifeSpanWellnessPage() {
 	};
 	return (
 		<div className="grid gap-3 px-3 w-[90%] mt-3">
-			{spans.map((s) => {
+			{spans.map((s, idx) => {
 				const isOpen = expanded === s.id;
 				const p = pct(s.factors);
 				return (
-					<div key={s.id}
+					<div key={idx}
 						className="overflow-hidden rounded-2xl px-3 border"
 						style={{ borderColor: COLORS.bone, background: COLORS.rustDim }} >
 						<button
@@ -159,9 +159,9 @@ export default function LifeSpanWellnessPage() {
 										style={{ width: `${p}%`, background: s.color, transition: "width 200ms ease" }}
 									/>
 								</div>
-								{s.factors.map((f) => (
+								{s.factors.map((f, idx) => (
 									<button
-										key={f.id}
+										key={idx}
 										onClick={() => toggleFactor(s.id, f.id)}
 										className="flex items-center gap-3 rounded-lg px-1 py-2 text-left"
 									>

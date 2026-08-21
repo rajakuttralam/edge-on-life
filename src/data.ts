@@ -1,6 +1,8 @@
 import type { Destination } from "./types";
 import balakumaran from "./assets/balakumaran.png"
 import indiraSoundarrajan from "./assets/IndiraSoundarrajan.png"
+import sukhabodhananda from "./assets/sukhabodhananda.jpg"
+import sivasankaran from "./assets/sivasankaran.jpg"
 
 export const destinations: Destination[] = [
 	{
@@ -34,11 +36,10 @@ export const destinations: Destination[] = [
 			"Knysna Forest is one of the last remaining tracts of indigenous forest in South Africa, home towering yellowwoods and quiet, sunlit trails.",
 	},
 	{
-		id: "namib-desert",
-		name: "Namib Desert",
-		location: "Namibia",
-		image:
-			"https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1200&auto=format&fit=crop",
+		id: "sugabogananda",
+		name: "Swami Sugabogananda",
+		location: "மனம்",
+		image: sukhabodhananda,
 		price: 320,
 		rating: 4.9,
 		days: 6,
@@ -50,11 +51,10 @@ export const destinations: Destination[] = [
 			"The Namib is a coastal desert famed for its towering red dunes, some of the tallest in the world, rolling down to a cold Atlantic coastline.",
 	},
 	{
-		id: "kruger",
-		name: "Kruger National Park",
-		location: "South Africa",
-		image:
-			"https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200&auto=format&fit=crop",
+		id: "sivasankaran",
+		name: "Sivasankaran",
+		location: "ஆரோக்கியமான வாழ்க்கை",
+		image: sivasankaran,
 		price: 410,
 		rating: 4.9,
 		days: 8,

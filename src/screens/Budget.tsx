@@ -25,8 +25,7 @@ export default function Budget() {
 
 
 	return (
-		<div className="relative  max-w-sm overflow-y-auto rounded-3xl border p-2">
-
+		<div className="mt-3 grid grid-cols-1 gap-3 w-[90%]">
 			<div className="mt-6 flex items-center justify-between">
 				<p className="text-xs font-semibold uppercase tracking-wide text-[#111a2e]/35">
 					Monthly overview
@@ -72,8 +71,8 @@ export default function Budget() {
 				</p>
 			</div>
 			<div className="mt-3 -mx-6 flex gap-3 overflow-x-auto px-6 pb-1">
-				{budgetCategories.map((c) => (
-					<CategoryCard key={c.id} category={c} />
+				{budgetCategories.map((c, idx) => (
+					<CategoryCard key={idx} category={c} />
 				))}
 			</div>
 			<div className="mt-8 flex items-center justify-between">
@@ -81,19 +80,19 @@ export default function Budget() {
 				<p className="text-xs font-medium text-[#111a2e]/40">See all</p>
 			</div>
 			<div className="mt-1 divide-y divide-[#111a2e]/[0.06] rounded-3xl bg-white px-4 shadow-[0_10px_24px_-14px_rgba(15,23,41,0.2)]">
-				{transactions.map((t) => {
+				{transactions.map((t, idx) => {
 					const category = budgetCategories.find((c) => c.id === t.categoryId)!;
-					return <TransactionRow key={t.id} transaction={t} category={category} />;
+					return <TransactionRow key={idx} transaction={t} category={category} />;
 				})}
 			</div>
 			<div className="mt-3 -mx-6 flex gap-3 overflow-x-auto px-6 pb-1">
-				{idCard.map((c) => (
-					<IdentityCard key={c.id} category={c} />
+				{idCard.map((c, idx) => (
+					<IdentityCard key={idx} category={c} />
 				))}
 			</div>
 			<div className="mt-3 -mx-6 flex gap-3 overflow-x-auto px-6 pb-1">
-				{interestFreeLoan.map((c) => (
-					<IFL key={c.id} category={c} />
+				{interestFreeLoan.map((c, idx) => (
+					<IFL key={idx} category={c} />
 				))}
 			</div>
 		</div>

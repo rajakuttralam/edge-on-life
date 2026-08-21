@@ -120,11 +120,11 @@ export default function Philosophy() {
 
 	return (
 		<div className="mt-7 flex flex-col gap-3 w-[90%]">
-			{spans.map((s) => {
+			{spans.map((s, idx) => {
 				const isOpen = expanded === s.id;
 				const p = pct(s.factors);
 				return (
-					<div key={s.id}
+					<div key={idx}
 						className="overflow-hidden rounded-2xl border"
 						style={{ borderColor: COLORS.hairline, background: COLORS.surface }} >
 						<button
@@ -168,9 +168,9 @@ export default function Philosophy() {
 										style={{ width: `${p}%`, background: s.color, transition: "width 200ms ease" }}
 									/>
 								</div>
-								{s.factors.map((f) => (
+								{s.factors.map((f, idx) => (
 									<button
-										key={f.id}
+										key={idx}
 										onClick={() => toggleFactor(s.id, f.id)}
 										className="flex items-center gap-3 rounded-lg px-1 py-2 text-left"
 									>

@@ -12,7 +12,7 @@ const items = [
 
 export default function BottomNav() {
 	return (
-		<div className="absolute bottom-12 z-20 w-[90vw] ">
+		<div className="fixed bottom-12 z-20 w-[90vw] ">
 			<nav className="flex items-center justify-between gap-2 rounded-full bg-[#111a2e] px-7 py-4 shadow-[0_20px_40px_-10px_rgba(17,26,46,0.55)]">
 				{items.map(({ to, icon: Icon, label }) => (
 					<NavLink

@@ -79,20 +79,18 @@ export default function Pilgrimages() {
 	return (
 		<div className="relative w-full max-w-sm overflow-hidden">
 			<div className="my-7 max-h-[780px] overflow-y-auto flex flex-col gap-3">
-				{spans.map((s) => {
+				{spans.map((s, idx) => {
 					const isOpen = expanded === s.id;
 					const p = pct(s.factors);
 					return (
-						<div key={s.id}
-							className="overflow-hidden rounded-2xl border"
+						<div key={idx}
+							className="overflow-hidden rounded-2xl border m-6"
 							style={{ borderColor: COLORS.hairline, background: COLORS.surface }} >
-							<button
-								onClick={() => setExpanded(isOpen ? null : s.id)}
+							<button onClick={() => setExpanded(isOpen ? null : s.id)}
 								className="flex w-full items-center justify-between px-4 py-3.5 text-left"
 								aria-expanded={isOpen} >
 								<div className="flex items-center gap-3">
-									<span
-										className="flex h-9 w-9 items-center justify-center rounded-full text-xs"
+									<span className="flex h-9 w-9 items-center justify-center rounded-full text-xs"
 										style={{ background: s.dim, color: s.color }} >
 										<BusIcon />
 									</span>
@@ -127,9 +125,9 @@ export default function Pilgrimages() {
 											style={{ width: `${p}%`, background: s.color, transition: "width 200ms ease" }}
 										/>
 									</div>
-									{s.factors.map((f) => (
+									{s.factors.map((f, idx) => (
 										<button
-											key={f.id}
+											key={idx}
 											onClick={() => toggleFactor(s.id, f.id)}
 											className="flex items-center gap-3 rounded-lg px-1 py-2 text-left"
 										>
