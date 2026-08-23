@@ -1,28 +1,4 @@
-import { useMemo, useState } from "react";
-import BudgetRing from "../components/BudgetRing";
-import CategoryCard from "../components/CategoryCard";
-import TransactionRow from "../components/TransactionRow";
-import MonthSwitcher from "../components/MonthSwitcher";
-import { budgetCategories, transactions, monthlyIncome, idCard, interestFreeLoan } from "../budgetData";
-import IdentityCard from "../components/IdentityCard";
-import IFL from "../components/IFL";
-
-const months = ["June 2026", "July 2026", "August 2026"];
-
 export default function Mind() {
-	const [monthIndex, setMonthIndex] = useState(months.length - 1);
-
-	const totalBudget = useMemo(
-		() => budgetCategories.reduce((sum, c) => sum + c.budget, 0),
-		[]
-	);
-	const totalSpent = useMemo(
-		() => budgetCategories.reduce((sum, c) => sum + c.spent, 0),
-		[]
-	);
-	const remaining = totalBudget - totalSpent;
-	const leftToSpendOfIncome = monthlyIncome - totalSpent;
-
 
 	return (
 		<div className="mt-3 grid grid-cols-1 gap-3 w-[90%]">
