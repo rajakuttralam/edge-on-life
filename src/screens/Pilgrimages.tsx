@@ -46,10 +46,16 @@ const INITIAL_SPANS: Span[] = [
 			{ id: "environment", label: "கிருஷ்ணன் கோவில், கோவில்பட்டி", done: true },
 			{ id: "environment", label: "தில்லை நடராஜர் கோவில், சிதம்பரம்", done: true },
 			{ id: "environment", label: "கதிரேசன் கோவில், கோவில்பட்டி", done: true },
-			{ id: "environment", label: "அருள்மிகு அண்ணாமலையார் திருக்கோயில், திருவண்ணாமலை", done: true }
+			{ id: "environment", label: "ஷீரடி சாய்பாபா", done: true },
+			{ id: "environment", label: "சத்ய சாயி பாபா புட்டபர்த்தி", done: true },
+			{ id: "environment", label: "ஈஷா யோகா மையம், கோயம்புத்தூர்", done: true },
+			{ id: "environment", label: "இருக்கங்குடி மாரியம்மன் கோவில்", done: true },
+			{ id: "environment", label: "அருள்மிகு மாரியம்மன் கோவில், சமயபுரம்", done: true },
 		],
+
 	}
 ];
+
 
 export default function Pilgrimages() {
 	const [spans, setSpans] = useState<Span[]>(INITIAL_SPANS);
@@ -78,7 +84,7 @@ export default function Pilgrimages() {
 
 	return (
 		<div className="relative w-full max-w-sm overflow-hidden">
-			<div className="my-7 max-h-[780px] overflow-y-auto flex flex-col gap-3">
+			<div className="my-7 pb-20 flex flex-col gap-3">
 				{spans.map((s, idx) => {
 					const isOpen = expanded === s.id;
 					const p = pct(s.factors);

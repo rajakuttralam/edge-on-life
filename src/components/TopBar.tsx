@@ -18,7 +18,7 @@ export default function TopBar() {
 						</span>
 					</NavLink>
 				</button>
-				<h4 className="text-[20px] font-extrabold leading-[1.08] text-[#111a2e]"
+				<h4 className="text-[16px] font-extrabold text-left leading-[1.08] text-[#111a2e]"
 					style={{ fontFamily: "var(--font-display)" }} >
 					Love is like a Tree
 				</h4>

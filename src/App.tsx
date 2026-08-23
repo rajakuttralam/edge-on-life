@@ -7,6 +7,7 @@ import Philosophy from "./screens/Philosophy";
 import ExperiaVilla from "./screens/ExperiaVilla";
 import Budget from "./screens/Budget";
 import Pilgrimages from "./screens/Pilgrimages";
+import Mind from "./screens/Mind";
 
 export default function App() {
 	return (
@@ -20,6 +21,7 @@ export default function App() {
 					<Route path="/experiavilla" element={<ExperiaVilla />} />
 					<Route path="/budget" element={<Budget />} />
 					<Route path="/pilgrimages" element={<Pilgrimages />} />
+					<Route path="/mind" element={<Mind />} />
 				</Routes>
 			</PhoneFrame>
 		</HashRouter>
