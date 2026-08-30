@@ -3,15 +3,16 @@
 export const monthlyIncome = 4200;
 
 export const budgetCategories: any[] = [
-	{ id: "housing", name: "Home Loan", icon: "home", color: "#6c63ff", budget: 1041000, spent: 10322 },
-	{ id: "food", name: "Muthoot PL", icon: "utensils", color: "#f5a623", budget: 41000, spent: 3350 },
-	{ id: "transport", name: "MoneyView", icon: "car", color: "#2fd4a6", budget: 100050, spent: 7100 },
-	{ id: "shopping", name: "SBI CC", icon: "bag", color: "#ff6b6b", budget: 138000, spent: 9050 },
-	{ id: "entertainment", name: "Murugan", icon: "film", color: "#4ec5f1", budget: 420000, spent: 7400 },
-	{ id: "health", name: "Ramesh", icon: "heart", color: "#c084fc", budget: 130000, spent: 2600 },
-	{ id: "utilities", name: "Lakshmi", icon: "zap", color: "#a0a4ab", budget: 50000, spent: 1500 },
-	{ id: "savings", name: "Jewel Loan", icon: "piggy", color: "#111a2e", budget: 150000, spent: 3000 },
-	{ id: "savings", name: "Ashok", icon: "piggy", color: "#111a2e", budget: 125000, spent: 3000 },
+	{ id: "housing", name: "Home Loan", icon: "home", color: "#6c63ff", budget: "10.41 L", spent: 10322 },
+	{ id: "entertainment", name: "Murugan", icon: "utensils", color: "#4ec5f1", budget: "5 L", spent: 8000 },
+	{ id: "food", name: "Muthoot PL", icon: "utensils", color: "#f5a623", budget: "40K", spent: 3350 },
+	{ id: "transport", name: "MoneyView", icon: "car", color: "#2fd4a6", budget: "1 L", spent: 7100 },
+	{ id: "shopping", name: "SBI CC", icon: "bag", color: "#ff6b6b", budget: 80000, spent: 3500 },
+	{ id: "health", name: "Ramesh", icon: "bag", color: "#c084fc", budget: 130000, spent: 2600 },
+	{ id: "utilities", name: "Lakshmi", icon: "bag", color: "#a0a4ab", budget: 30000, spent: 900 },
+	{ id: "savings", name: "Jewel Loan", icon: "car", color: "#6c63ff", budget: 150000, spent: 3000 },
+	{ id: "savings", name: "Ashok", icon: "bag", color: "#f5a623", budget: 125000, spent: 0 },
+	{ id: "savings", name: "Shanmugam", icon: "car", color: "#4ec5f1", budget: 80000, spent: 0 }
 ];
 
 export const idCard: any[] = [
@@ -44,7 +45,6 @@ export const transactions: any[] = [
 	{ id: "t11", merchant: "Food", categoryId: "transport", date: "Aug 10", amount: 2300, type: "expense" },
 	{ id: "t12", merchant: "Medicine", categoryId: "housing", date: "Aug 2", amount: 500, type: "expense" },
 	{ id: "t13", merchant: "Ration", categoryId: "entertainment", date: "Aug 10", amount: 200, type: "expense" },
-	{ id: "t14", merchant: "Sastha Koil", categoryId: "housing", date: "Aug 5", amount: 200, type: "expense" },
 	{ id: "t15", merchant: "Flour", categoryId: "transport", date: "Aug 10", amount: 800, type: "expense" },
 	{ id: "t15", merchant: "Snacks", categoryId: "transport", date: "Aug 10", amount: 500, type: "expense" },
 ];

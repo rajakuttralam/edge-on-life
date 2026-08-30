@@ -7,7 +7,7 @@ export default function IFL({ category }: { category: BudgetCategory }) {
 	const over = category.spent > category.budget;
 
 	return (
-		<div className="flex w-auto shrink-0 flex-col gap-3 rounded-3xl bg-white p-4 shadow-[0_8px_20px_-12px_rgba(15,23,41,0.25)]">
+		<div className="flex w-48 shrink-0 flex-col gap-3 rounded-3xl bg-white p-4 shadow-[0_8px_20px_-12px_rgba(15,23,41,0.25)]">
 			<div className="flex items-center justify-between">
 				<span
 					className="flex h-9 w-9 items-center justify-center rounded-full"
