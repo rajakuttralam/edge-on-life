@@ -30,19 +30,17 @@ export const HU3: any[] = [
 
 export const HU4: any[] = [
 	{ id: "t10", merchant: "Sastha Koil", categoryId: "shopping", date: "Aug 5", amount: 200, type: "expense" },
-	{ id: "t3", merchant: "Milk.", categoryId: "shopping", date: "Aug 7", amount: 1500, type: "expense" },
-	{ id: "t4", merchant: "EB", categoryId: "shopping", date: "Aug 2", amount: 2500, type: "expense" },
-	{ id: "t5", merchant: "Internet + Mobile", categoryId: "shopping", date: "Aug 10", amount: 1000, type: "expense" },
-	{ id: "t6", merchant: "Hair Cut & Coloring", categoryId: "shopping", date: "Aug 5", amount: 700, type: "expense" },
-	{ id: "t7", merchant: "Petrol", categoryId: "shopping", date: "Aug 10", amount: 3000, type: "expense" },
-	{ id: "t7", merchant: "Bike Service", categoryId: "shopping", date: "Aug 10", amount: 1000, type: "expense" },
-	{ id: "t8", merchant: "Tution Fees", categoryId: "shopping", date: "Aug 2", amount: 500, type: "expense" },
-	{ id: "t9", merchant: "Tea", categoryId: "shopping", date: "Aug 10", amount: 1500, type: "expense" },
-	{ id: "t11", merchant: "Food", categoryId: "shopping", date: "Aug 10", amount: 2300, type: "expense" },
-	{ id: "t12", merchant: "Medicine", categoryId: "shopping", date: "Aug 2", amount: 500, type: "expense" },
-	{ id: "t13", merchant: "Ration", categoryId: "shopping", date: "Aug 10", amount: 200, type: "expense" },
-	{ id: "t15", merchant: "Flour", categoryId: "shopping", date: "Aug 10", amount: 800, type: "expense" },
-	{ id: "t15", merchant: "Snacks", categoryId: "shopping", date: "Aug 10", amount: 500, type: "expense" }
+	{ id: "t13", merchant: "Ration", categoryId: "shopping", date: "Aug 10", amount: 300, type: "expense" },
+	{ id: "t1", merchant: "Snacks", categoryId: "shopping", date: "Aug 10", amount: 500, type: "expense" },
+	{ id: "t2", merchant: "Medicine", categoryId: "shopping", date: "Aug 2", amount: 500, type: "expense" },
+	{ id: "t3", merchant: "Flour", categoryId: "shopping", date: "Aug 10", amount: 800, type: "expense" },
+	{ id: "t4", merchant: "Hair Cut & Coloring", categoryId: "shopping", date: "Aug 5", amount: 800, type: "expense" },
+	{ id: "t5", merchant: "Internet + Mobile", categoryId: "shopping", date: "Aug 10", amount: 1200, type: "expense" },
+	{ id: "t6", merchant: "Tea", categoryId: "shopping", date: "Aug 10", amount: 1200, type: "expense" },
+	{ id: "t7", merchant: "Milk.", categoryId: "shopping", date: "Aug 7", amount: 1500, type: "expense" },
+	{ id: "t8", merchant: "EB", categoryId: "shopping", date: "Aug 2", amount: 2000, type: "expense" },
+	{ id: "t9", merchant: "Food", categoryId: "shopping", date: "Aug 10", amount: 2500, type: "expense" },
+	{ id: "t10", merchant: "Petrol", categoryId: "shopping", date: "Aug 10", amount: 3500, type: "expense" }
 ];
 
 export const HU5: any[] = [
@@ -53,7 +51,6 @@ export const HU5: any[] = [
 	{ id: "entertainment", name: "Uma", icon: "film", color: "#4ec5f1", budget: 50000, spent: 7400 },
 ];
 
-
 export const idCard: any[] = [
 	{ id: "housing", name: "Raja K", icon: "home", color: "#6c63ff", budget: 'RMM0335869', spent: 10322 },
 	{ id: "food", name: "Akila", icon: "utensils", color: "#f5a623", budget: 'DVS7294531', spent: 3350 },
@@ -61,4 +58,3 @@ export const idCard: any[] = [
 	{ id: "shopping", name: "Appa", icon: "bag", color: "#ff6b6b", budget: 'RMM2076974', spent: 9050 },
 	{ id: "entertainment", name: "Amma", icon: "film", color: "#4ec5f1", budget: 'RMM2076982', spent: 7400 },
 ];
-
