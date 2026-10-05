@@ -1,13 +1,11 @@
-// import type { BudgetCategory, Transaction } from "./types";
-
 export const monthlyIncome = 4200;
 export const HU: any[] = [
 	{ id: "shopping", name: "SBI CC", icon: "bag", color: "#4ec5f1", budget: 20000, spent: 0 },
 	{ id: "shopping", name: "Ashok", icon: "bag", color: "#f5a623", budget: 25000, spent: 0 },
 	{ id: "shopping", name: "Randy", icon: "bag", color: "#a0a4ab", budget: 10000, spent: 0 },
 	{ id: "shopping", name: "Shanmugam", icon: "bag", color: "#4ec5f1", budget: 90000, spent: 0 },
-	{ id: "shopping", name: "Lakshmi", icon: "bag", color: "#a0a4ab", budget: 20000, spent: 900 },
-	{ id: "shopping", name: "Ramesh", icon: "bag", color: "#c084fc", budget: 130000, spent: 2600 },
+	{ id: "shopping", name: "Lakshmi", icon: "bag", color: "#a0a4ab", budget: 30000, spent: 900 },
+	{ id: "shopping", name: "Name Transfer", icon: "bag", color: "#a0a4ab", budget: 30000, spent: 0 },
 ];
 
 export const HU1: any[] = [
@@ -19,6 +17,7 @@ export const HU2: any[] = [
 	{ id: "housing", name: "Home Loan", icon: "home", color: "#6c63ff", budget: "10.41 L", spent: 10322 },
 	{ id: "entertainment", name: "Murugan", icon: "utensils", color: "#4ec5f1", budget: "5 L", spent: 8000 },
 	{ id: "food", name: "Tata Capital", icon: "utensils", color: "#f5a623", budget: "4.25 L", spent: 10500 },
+	{ id: "shopping", name: "Ramesh", icon: "bag", color: "#c084fc", budget: 340000, spent: 2600 },
 ];
 
 export const HU3: any[] = [
