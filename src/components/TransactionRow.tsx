@@ -34,11 +34,9 @@ export default function TransactionRow({
 					{category.name} · {transaction.date}
 				</p>
 			</div>
-			<p
-				className={`shrink-0 text-[13.5px] font-bold र {
+			<p className={`shrink-0 text-[13.5px] font-bold र {
           isIncome ? "text-[#22c55e]" : "text-[#111a2e]"
-        }`}
-			>
+        }`} >
 				{isIncome ? "+" : "−"}र {transaction.amount.toLocaleString()}
 			</p>
 		</div>

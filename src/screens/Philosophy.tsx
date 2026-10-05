@@ -33,6 +33,65 @@ type Span = {
 
 const INITIAL_SPANS: Span[] = [
 	{
+		id: "Economics",
+		name: "Economics",
+		blurb: "...",
+		color: COLORS.sage,
+		dim: COLORS.sageDim,
+		factors: [
+			{
+				id: "taste",
+				label: "Investment",
+				done: true
+			},
+			{
+				id: "exercise",
+				label: "Industrial Development",
+				done: true
+			},
+			{
+				id: "mental",
+				label: "Production",
+				done: true
+			},
+			{
+				id: "environment",
+				label: "Employement",
+				done: true
+			},
+			{
+				id: "environment",
+				label: "Purchasing Power",
+				done: true
+			},
+			{
+				id: "environment",
+				label: "Displosable Income",
+				done: true
+			},
+			{
+				id: "environment",
+				label: "Demand Hike",
+				done: true
+			},
+			{
+				id: "environment",
+				label: "Order Increases",
+				done: true
+			},
+			{
+				id: "environment",
+				label: "Export ",
+				done: true
+			},
+			{
+				id: "environment",
+				label: "Displosable Income",
+				done: true
+			},
+		],
+	},
+	{
 		id: "தத்துவம்",
 		name: "தத்துவம்",
 		blurb: "...",
