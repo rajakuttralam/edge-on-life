@@ -8,7 +8,7 @@ export default function Budget() {
 
 	return (
 		<div className="mt-3 grid grid-cols-1 gap-3 w-[90%]">
-			<div className="mt-8 flex items-center justify-between">
+			<div className="mt-8 flex flex-wrap items-center justify-between">
 				<h2 className="text-[15px] font-bold text-[#111a2e]">Short Term Loan</h2>
 				<p className="text-xs font-medium text-[#111a2e]/40">
 					{HU.length} active
