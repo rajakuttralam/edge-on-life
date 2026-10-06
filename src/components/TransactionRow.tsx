@@ -23,7 +23,7 @@ export default function TransactionRow({
 	const isIncome = transaction.type === "income";
 
 	return (
-		<div className="flex items-center gap-3 py-2.5">
+		<div className="flex items-center gap-3 py-2.5 p-1">
 			<span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl"
 				style={{ backgroundColor: `र {category.color}1a` }} >
 				<Icon size={17} style={{ color: category.color }} strokeWidth={2.2} />
