@@ -1,106 +1,100 @@
 import image from "./../assets/Villa.png"
+import image1 from "./../assets/budgetHome.png"
 
+import CategoryCard from "../components/CategoryCard";
+import TransactionRow from "../components/TransactionRow";
+import { HU, HU1, HU2, HU3, HU4, HU5, idCard } from "../budgetData";
+import IdentityCard from "../components/IdentityCard";
+import IFL from "../components/IFL";
 export default function ExperiaVilla() {
 	return (
 		<div className="flex flex-col  items-center justify-center" style={{ background: "#f8f8f8" }} >
-			{/* <span className="flex w-full overflow-y-auto text-white items-start justify-start p-3 rounded-full text-3xl" >
-				EXPERIA VILLA
-			</span> */}
-			<div className=" " >
+			<div className="flex flex-row justify-between items-center w-full" >
 				<img
 					src={image}
 					alt={"name"}
-					className="h-[70vh] w-full object-cover  transition-transform duration-300 group-hover:scale-105"
+					className="h-[30vh] w-full object-cover  transition-transform duration-300 group-hover:scale-105"
+				/>
+				<img
+					src={image1}
+					alt={"name"}
+					className="h-[30vh] w-[75vw] object-cover  transition-transform duration-300 group-hover:scale-105"
 				/>
 			</div>
-			{/* <div className="flex  items-center justify-center"
-				style={{ background: "#f8f8f8" }} >
-				<div className="relative w-full max-w-sm overflow-hidden rounded-3xl border"
-					style={{ background: COLORS.ink, borderColor: COLORS.hairline }}>
-					<div className="max-h-[780px] overflow-y-auto px-5 pb-24 pt-2">
-						<div className="mt-7 flex flex-col gap-3">
-							{spans.map((s) => {
-								const isOpen = expanded === s.id;
-								const p = pct(s.factors);
-								return (
-									<div key={s.id}
-										className="overflow-hidden rounded-2xl border"
-										style={{ borderColor: COLORS.hairline, background: COLORS.surface }} >
-										<button
-											onClick={() => setExpanded(isOpen ? null : s.id)}
-											className="flex w-full items-center justify-between px-4 py-3.5 text-left"
-											aria-expanded={isOpen} >
-											<div className="flex items-center gap-3">
-												<span
-													className="flex h-9 w-9 items-center justify-center rounded-full text-xs"
-													style={{ background: s.dim, color: s.color }} >
-													{p}%
-												</span>
-												<div>
-													<p className="text-sm" style={{ color: COLORS.bone }}>
-														{s.name}
-													</p>
-													<p className="text-xs" style={{ color: COLORS.muted }}>
-														{s.blurb}
-													</p>
-												</div>
-											</div>
-											<ChevronDown
-												size={18}
-												style={{
-													color: COLORS.muted,
-													transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-													transition: "transform 150ms ease",
-												}}
-												aria-hidden="true"
-											/>
-										</button>
-
-										{isOpen && (
-											<div
-												className="flex flex-col gap-1 px-4 pb-4"
-												style={{ borderTop: `1px solid ${COLORS.hairline}` }}
-											>
-												<div className="mb-2 mt-3 h-1 w-full overflow-hidden rounded-full" style={{ background: s.dim }}>
-													<div
-														className="h-full rounded-full"
-														style={{ width: `${p}%`, background: s.color, transition: "width 200ms ease" }}
-													/>
-												</div>
-												{s.factors.map((f) => (
-													<button
-														key={f.id}
-														onClick={() => toggleFactor(s.id, f.id)}
-														className="flex items-center gap-3 rounded-lg px-1 py-2 text-left"
-													>
-														<span
-															className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border"
-															style={{
-																borderColor: f.done ? s.color : COLORS.hairline,
-																background: f.done ? s.color : "transparent",
-															}}
-														>
-															{f.done && <Check size={12} color={COLORS.ink} strokeWidth={3} />}
-														</span>
-														<span
-															className="text-sm"
-															style={{
-																color: f.done ? COLORS.bone : COLORS.muted,
-															}}
-														>
-															{f.label}
-														</span>
-													</button>
-												))}
-											</div>
-										)}
-									</div>
-								);
-							})}
-						</div>
-					</div>
+			<div className="mt-3 grid grid-cols-1 gap-3 bg-slate-900 w-[96%] p-1">
+				<div className="mt-8 flex flex-wrap items-center justify-between">
+					<h2 className="text-[15px] font-bold text-slate-100 px-3">Critical Pending</h2>
+					<p className="text-xs font-medium text-[#111a2e]/40">
+						{HU.length} active
+					</p>
 				</div>
-			</div> */}
+				<div className="flex flex-wrap gap-3  justify-center w-[92vw] py-2 ">
+					{HU.map((c, idx) => (
+						<CategoryCard key={idx} category={c} />
+					))}
+				</div>
+				<div className="mt-8 flex items-center justify-between">
+					<h2 className="text-[15px] font-bold text-slate-100 px-3">Short Term Loan</h2>
+					<p className="text-xs font-medium text-[#111a2e]/40">
+						{HU1.length} active
+					</p>
+				</div>
+				<div className="flex flex-wrap gap-3  justify-center w-[92vw] py-2 ">
+					{HU1.map((c, idx) => (
+						<CategoryCard key={idx} category={c} />
+					))}
+				</div>
+				<div className="mt-8 flex items-center justify-between">
+					<h2 className="text-[15px] font-bold text-slate-100 px-3">Monthly Home Expense</h2>
+					<p className="text-xs font-medium px-3">
+						{HU3.length} active
+					</p>
+				</div>
+				<div className="flex flex-wrap gap-3 justify-center w-[92vw] py-2 ">
+					{HU3.map((c, idx) => (
+						<CategoryCard key={idx} category={c} />
+					))}
+				</div>
+
+				<div className="mt-8 flex items-center justify-between">
+					<h2 className="text-[15px] font-bold text-slate-100 px-3">Home / Personal Loan EMI</h2>
+					<p className="text-xs font-medium text-slate-100 px-3 ">
+						{HU1.length} active
+					</p>
+				</div>
+
+				<div className="flex flex-wrap gap-3 justify-center w-[92vw] py-2 ">
+					{HU2.map((c, idx) => (
+						<CategoryCard key={idx} category={c} />
+					))}
+				</div>
+				<div className="mt-8 flex items-center justify-between">
+					<h2 className="text-[15px] font-bold text-slate-100 px-3">Monthly Expense - 15k</h2>
+					<p className="text-xs font-medium text-slate-100 px-3 ">See all</p>
+				</div>
+				<div className="m-1 divide-y divide-[#111a2e]/[0.06] rounded-xl bg-white px-4 shadow-[0_10px_24px_-14px_rgba(15,23,41,0.2)]">
+					{HU4.map((t, idx) => {
+						const category = HU1.find((c) => c.id === t.categoryId)!;
+						return <TransactionRow key={idx} transaction={t} category={category} />;
+					})}
+				</div>
+				<div className="mt-8 flex items-center justify-between">
+					<h2 className="text-[15px] font-bold text-slate-100 px-3">Asset Management</h2>
+					<p className="text-xs font-medium text-slate-100 px-3">
+						{HU5.length} active
+					</p>
+				</div>
+				<div className="flex flex-wrap gap-3 justify-center w-[92vw] py-2 ">
+					{HU5.map((c, idx) => (
+						<IFL key={idx} category={c} />
+					))}
+				</div>
+				<div className="flex flex-wrap gap-3 mb-24">
+					{idCard.map((c, idx) => (
+						<IdentityCard key={idx} category={c} />
+					))}
+				</div>
+			</div>
 		</div>
 	);
 }
