@@ -1,8 +1,8 @@
-import { Home, MapPin, Bus, IndianRupee, Toolbox, CuboidIcon } from "lucide-react";
+import { MapPin, Bus, IndianRupee, HardHat, Toolbox, CuboidIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const items = [
-	{ to: "/", icon: Home, label: "Home" },
+	{ to: "/", icon: HardHat, label: "Home" },
 	{ to: "/packages", icon: CuboidIcon, label: "Packages" },
 	{ to: "/philosophy", icon: MapPin, label: "Philosophy" },
 	{ to: "/experiavilla", icon: Toolbox, label: "Experia Villa" },

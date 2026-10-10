@@ -1,4 +1,5 @@
-import { Home, Film, Heart, Zap, PiggyBank, Banknote, Building, CreditCard } from "lucide-react";
+import { Home, BrickWall, PaintbrushVertical, Film, Heart, Zap, PiggyBank, Banknote, Building, CreditCard, InspectionPanel, Grid3x2, DoorOpen, CircuitBoard, Toilet, ShowerHead, BrickWallShield, CirclePile, Tally2, Bubbles } from "lucide-react";
+import { faucet } from "@lucide/lab"
 import type { BudgetCategory } from "../types";
 
 const icons = {
@@ -10,7 +11,19 @@ const icons = {
 	heart: Heart,
 	zap: Zap,
 	piggy: PiggyBank,
-	building: Building
+	building: Building,
+	brickwall: BrickWall,
+	paintbrushvertical: PaintbrushVertical,
+	inspectionpanel: InspectionPanel,
+	grid3x2: Grid3x2,
+	dooropen: DoorOpen,
+	circuitboard: CircuitBoard,
+	toilet: Toilet,
+	showerhead: ShowerHead,
+	brickwallshield: BrickWallShield,
+	circlepile: CirclePile,
+	tally2: Tally2,
+	bubbles: Bubbles
 };
 
 export default function Card({ category }: { category: BudgetCategory }) {

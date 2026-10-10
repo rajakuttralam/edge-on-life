@@ -1,17 +1,17 @@
 export const monthlyIncome = 4200;
 export const Costing: any[] = [
-	{ id: "shopping", name: "Cement", icon: "bag", color: "#4ec5f1", budget: "2.41 L", spent: "16.4%" },
-	{ id: "shopping", name: "Sand", icon: "bag", color: "#f5a623", budget: "1.81 L", spent: "12.3%" },
-	{ id: "shopping", name: "Aggregate", icon: "bag", color: "#a0a4ab", budget: "1.10 L", spent: "7.4%" },
-	{ id: "shopping", name: "Steel", icon: "bag", color: "#4ec5f1", budget: "3.62 L", spent: "24.6%" },
-	{ id: "shopping", name: "Bricks", icon: "bag", color: "#f5a623", budget: "1.81 L", spent: "12.3%" },
-	{ id: "shopping", name: "Tiles", icon: "bag", color: "#f5a623", budget: "1.81 L", spent: "12.3%" },
-	{ id: "shopping", name: "Painting", icon: "bag", color: "#f5a623", budget: "1.81 L", spent: "12.3%" },
-	{ id: "shopping", name: "Window", icon: "bag", color: "#a0a4ab", budget: "3.36 L", spent: "22.8%" },
-	{ id: "shopping", name: "Door", icon: "bag", color: "#a0a4ab", budget: "2.43 L", spent: "16.5%" },
-	{ id: "shopping", name: "Plumbing", icon: "bag", color: "#a0a4ab", budget: "3.36 L", spent: "22.8%" },
-	{ id: "shopping", name: "Electrical", icon: "bag", color: "#a0a4ab", budget: "2.43 L", spent: "16.5%" },
-	{ id: "shopping", name: "Sanitary", icon: "bag", color: "#a0a4ab", budget: "3.36 L", spent: "22.8%" },
+	{ id: "shopping", name: "Cement", icon: "brickwallshield", color: "#4ec5f1", budget: "2.41 L", spent: "16.4%" },
+	{ id: "shopping", name: "Sand", icon: "bubbles", color: "#f5a623", budget: "1.81 L", spent: "12.3%" },
+	{ id: "shopping", name: "Aggregate", icon: "circlepile", color: "#a0a4ab", budget: "1.10 L", spent: "7.4%" },
+	{ id: "shopping", name: "Steel", icon: "tally2", color: "#4ec5f1", budget: "3.62 L", spent: "24.6%" },
+	{ id: "shopping", name: "Bricks", icon: "brickwall", color: "#f5a623", budget: "1.81 L", spent: "12.3%" },
+	{ id: "shopping", name: "Tiles", icon: "inspectionpanel", color: "#f5a623", budget: "1.81 L", spent: "12.3%" },
+	{ id: "shopping", name: "Painting", icon: "paintbrushvertical", color: "#f5a623", budget: "1.81 L", spent: "12.3%" },
+	{ id: "shopping", name: "Window", icon: "grid3x2", color: "#a0a4ab", budget: "3.36 L", spent: "22.8%" },
+	{ id: "shopping", name: "Door", icon: "dooropen", color: "#a0a4ab", budget: "2.43 L", spent: "16.5%" },
+	{ id: "shopping", name: "Plumbing", icon: "showerhead", color: "#a0a4ab", budget: "3.36 L", spent: "22.8%" },
+	{ id: "shopping", name: "Electrical", icon: "circuitboard", color: "#a0a4ab", budget: "2.43 L", spent: "16.5%" },
+	{ id: "shopping", name: "Sanitary", icon: "toilet", color: "#a0a4ab", budget: "3.36 L", spent: "22.8%" },
 ];
 
 export const Quantity: any[] = [
