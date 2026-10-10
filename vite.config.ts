@@ -7,7 +7,6 @@ export default defineConfig({
 	plugins: [react(), tailwindcss(),
 	VitePWA({
 		registerType: 'autoUpdate',
-
 		includeAssets: [
 			'favicon.ico',
 			'robots.txt',
@@ -37,6 +36,8 @@ export default defineConfig({
 			]
 		},
 		workbox: {
+			// Increase the limit to 5 MiB (5 * 1024 * 1024)
+			maximumFileSizeToCacheInBytes: 5242880,
 			globPatterns: ['**/*.{js,css,html,png,svg,ico}']
 		}
 	})],
