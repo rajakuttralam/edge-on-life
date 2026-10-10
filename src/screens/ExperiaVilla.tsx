@@ -11,12 +11,12 @@ export default function ExperiaVilla() {
 		<div className="flex flex-col  items-center justify-center" style={{ background: "#f8f8f8" }} >
 			<div className="flex flex-row justify-between items-center w-full" >
 				<img
-					src={image}
+					src={image1}
 					alt={"name"}
 					className="h-[30vh] w-full object-cover  transition-transform duration-300 group-hover:scale-105"
 				/>
 				<img
-					src={image1}
+					src={image}
 					alt={"name"}
 					className="h-[30vh] w-[75vw] object-cover  transition-transform duration-300 group-hover:scale-105"
 				/>
