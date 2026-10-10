@@ -1,4 +1,4 @@
-import { Home, Briefcase, MapPin, User, Bus, IndianRupee, Building, Toolbox, CuboidIcon } from "lucide-react";
+import { Home, MapPin, Bus, IndianRupee, Toolbox, CuboidIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const items = [
