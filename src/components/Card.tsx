@@ -1,5 +1,4 @@
 import { Home, BrickWall, PaintbrushVertical, Film, Heart, Zap, PiggyBank, Banknote, Building, CreditCard, InspectionPanel, Grid3x2, DoorOpen, CircuitBoard, Toilet, ShowerHead, BrickWallShield, CirclePile, Tally2, Bubbles } from "lucide-react";
-import { faucet } from "@lucide/lab"
 import type { BudgetCategory } from "../types";
 
 const icons = {
