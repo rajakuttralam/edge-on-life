@@ -1,9 +1,8 @@
-import image from "./../assets/Villa.png"
+// import image from "./../assets/Villa.png"
 import image1 from "./../assets/budgetHome.png"
-
-import CategoryCard from "../components/CategoryCard";
+import Card from "../components/Card";
 import TransactionRow from "../components/TransactionRow";
-import { HU, HU1, HU2, HU3, HU4, HU5, idCard } from "../budgetData";
+import { Costing, Quantity, HU2, HU3, HU4, HU5, idCard } from "../ConstructionCostCalculator";
 import IdentityCard from "../components/IdentityCard";
 import IFL from "../components/IFL";
 export default function ExperiaVilla() {
@@ -15,57 +14,52 @@ export default function ExperiaVilla() {
 					alt={"name"}
 					className="h-[30vh] w-full object-cover  transition-transform duration-300 group-hover:scale-105"
 				/>
-				<img
-					src={image}
-					alt={"name"}
-					className="h-[30vh] w-[75vw] object-cover  transition-transform duration-300 group-hover:scale-105"
-				/>
 			</div>
 			<div className="mt-3 grid grid-cols-1 gap-3 bg-slate-900 w-[96%] p-1">
 				<div className="mt-8 flex flex-wrap items-center justify-between">
-					<h2 className="text-[15px] font-bold text-slate-100 px-3">Critical Pending</h2>
+					<h2 className="text-[15px] font-bold text-slate-100 px-3">Cost of Material</h2>
 					<p className="text-xs font-medium text-[#111a2e]/40">
-						{HU.length} active
+						{Costing.length} active
 					</p>
 				</div>
 				<div className="flex flex-wrap gap-3  justify-center w-[92vw] py-2 ">
-					{HU.map((c, idx) => (
-						<CategoryCard key={idx} category={c} />
+					{Costing.map((c, idx) => (
+						<Card key={idx} category={c} />
 					))}
 				</div>
 				<div className="mt-8 flex items-center justify-between">
-					<h2 className="text-[15px] font-bold text-slate-100 px-3">Short Term Loan</h2>
+					<h2 className="text-[15px] font-bold text-slate-100 px-3">Cost of Labour</h2>
 					<p className="text-xs font-medium text-[#111a2e]/40">
-						{HU1.length} active
+						{Quantity.length} active
 					</p>
 				</div>
 				<div className="flex flex-wrap gap-3  justify-center w-[92vw] py-2 ">
-					{HU1.map((c, idx) => (
-						<CategoryCard key={idx} category={c} />
+					{Quantity.map((c, idx) => (
+						<Card key={idx} category={c} />
 					))}
 				</div>
 				<div className="mt-8 flex items-center justify-between">
-					<h2 className="text-[15px] font-bold text-slate-100 px-3">Monthly Home Expense</h2>
+					<h2 className="text-[15px] font-bold text-slate-100 px-3">Work Area Calculation</h2>
 					<p className="text-xs font-medium px-3">
 						{HU3.length} active
 					</p>
 				</div>
 				<div className="flex flex-wrap gap-3 justify-center w-[92vw] py-2 ">
 					{HU3.map((c, idx) => (
-						<CategoryCard key={idx} category={c} />
+						<Card key={idx} category={c} />
 					))}
 				</div>
 
 				<div className="mt-8 flex items-center justify-between">
 					<h2 className="text-[15px] font-bold text-slate-100 px-3">Home / Personal Loan EMI</h2>
 					<p className="text-xs font-medium text-slate-100 px-3 ">
-						{HU1.length} active
+						{HU2.length} active
 					</p>
 				</div>
 
 				<div className="flex flex-wrap gap-3 justify-center w-[92vw] py-2 ">
 					{HU2.map((c, idx) => (
-						<CategoryCard key={idx} category={c} />
+						<Card key={idx} category={c} />
 					))}
 				</div>
 				<div className="mt-8 flex items-center justify-between">
@@ -74,7 +68,7 @@ export default function ExperiaVilla() {
 				</div>
 				<div className="m-1 divide-y divide-[#111a2e]/[0.06] rounded-xl bg-white px-4 shadow-[0_10px_24px_-14px_rgba(15,23,41,0.2)]">
 					{HU4.map((t, idx) => {
-						const category = HU1.find((c) => c.id === t.categoryId)!;
+						const category = HU2.find((c) => c.id === t.categoryId)!;
 						return <TransactionRow key={idx} transaction={t} category={category} />;
 					})}
 				</div>

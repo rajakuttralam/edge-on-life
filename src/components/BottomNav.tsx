@@ -1,11 +1,11 @@
-import { Home, Briefcase, MapPin, User, Bus, IndianRupee } from "lucide-react";
+import { Home, Briefcase, MapPin, User, Bus, IndianRupee, Building, Toolbox, CuboidIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const items = [
 	{ to: "/", icon: Home, label: "Home" },
-	{ to: "/packages", icon: Briefcase, label: "Packages" },
+	{ to: "/packages", icon: CuboidIcon, label: "Packages" },
 	{ to: "/philosophy", icon: MapPin, label: "Philosophy" },
-	{ to: "/experiavilla", icon: User, label: "Experia Villa" },
+	{ to: "/experiavilla", icon: Toolbox, label: "Experia Villa" },
 	{ to: "/budget", icon: IndianRupee, label: "Monthly Budget" },
 	{ to: "/pilgrimages", icon: Bus, label: "Pilgrimages" },
 ];
